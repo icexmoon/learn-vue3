@@ -1,12 +1,15 @@
 <template>
 	<div class="father">
 		<h3>父组件</h3>
-		<Child />
+		<Child @send-toy="getToy"/>
 	</div>
 </template>
 
 <script setup lang="ts" name="Father">
 import Child from './Child.vue'
+function getToy(toy: string) {
+	console.log(toy)
+}
 </script>
 
 <style scoped>

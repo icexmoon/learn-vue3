@@ -1,10 +1,12 @@
 <template>
   <div class="child">
     <h3>子组件</h3>
+	<button @click="emit('send-toy', '奥特曼')">发送小玩具</button>
   </div>
 </template>
 
 <script setup lang="ts" name="Child">
+const emit = defineEmits(['send-toy'])
 </script>
 
 <style scoped>
